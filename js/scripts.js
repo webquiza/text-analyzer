@@ -29,6 +29,9 @@ function numberOfOccurrencesInText(word, text) {
 }
 
 function boldPassage(word, text) {
+  if ((text.trim().length === 0) || (word.trim().length === 0)) {
+    return "";
+  }
   let htmlString = "<p>";
   let textArray = text.split(" ");
   textArray.forEach(function(element, index) {
